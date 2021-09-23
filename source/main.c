@@ -1,5 +1,39 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
+
+void my_putchar(char c)
+{
+    write (1, &c, 1);
+}
+
+void my_putnbr(int nb){
+    if (nb < 0){
+        my_putchar('-');
+        nb = -nb;
+    }
+    if (nb <= 9){
+        my_putchar(nb+'0');
+    }else {
+        my_putnbr(nb / 10);
+        my_putchar(nb  % 10+'0');
+    }
+}
+
+int my_strlen(char* s){
+    int i = 0;
+    while(s[i]!='\0'){
+        i++;
+    }
+    return i;
+}
+
+void my_putstr(char* s){
+    for(int j=0; j<my_strlen(s); j++){
+        my_putchar(s[j]);
+    }
+}
 
 int main(int argc, const char * argv[]) {
     //Variables
@@ -9,7 +43,7 @@ int main(int argc, const char * argv[]) {
     float resultat = 0.0;
     
     // Entrées
-    operateur = '+';
+    operateur = '*';
     operant1 = 3612;
     operant2 = 6;
     
