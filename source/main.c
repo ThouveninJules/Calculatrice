@@ -43,29 +43,37 @@ int main(int argc, const char * argv[]) {
     float resultat = 0.0;
     
     // Entrées
-    operateur = '*';
+    operateur = '+';
     operant1 = 3612;
     operant2 = 6;
     
     // Calculs
     if (operateur == '+') {
         resultat = operant1 + operant2;
-        printf("Le résultat de l'addition est: %.2f\n", resultat);
+        //printf("Le résultat de l'addition est: %.2f\n", resultat);
+        my_putstr("Le résultat de l'addition est : ");
+        my_putnbr(resultat);
     }
     
     if (operateur == '-') {
         resultat = operant1 - operant2;
-        printf("Le résultat de la soustraction est: %.2f\n", resultat);
+        // printf("Le résultat de la soustraction est: %.2f\n", resultat);
+        my_putstr("Le résultat de la soustraction est : ");
+        my_putnbr(resultat);
     }
     
     if (operateur == '*') {
         resultat = operant1 * operant2;
-        printf("Le résultat de la multiplication est: %.2f\n", resultat);
+        // printf("Le résultat de la multiplication est: %.2f\n", resultat);
+        my_putstr("Le résultat de la multiplication est : ");
+        my_putnbr(resultat);
     }
     
     if (operateur == '/') {
         resultat = operant1 / operant2;
-        printf("Le résultat de la division est: %.2f\n", resultat);
+        // printf("Le résultat de la division est: %.2f\n", resultat);
+        my_putstr("Le résultat de la division est : ");
+        my_putnbr(resultat);
     }
     return 0;
 }
