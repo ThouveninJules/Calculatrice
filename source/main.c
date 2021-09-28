@@ -38,39 +38,40 @@ void my_putstr(char* s){
 int main(int argc, const char * argv[]) {
     //Variables
     char operateur;
-    float operant1;
-    float operant2;
+    float o1;
+    float o2;
     float resultat = 0.0;
     
     // Entrées
     operateur = '+';
-    operant1 = 3612;
-    operant2 = 6;
+    o1 = 3612;
+    o2 = 6;
+    scanf("%d", &o1);
     
     // Calculs
     if (operateur == '+') {
-        resultat = operant1 + operant2;
+        resultat = o1 + o2;
         //printf("Le résultat de l'addition est: %.2f\n", resultat);
         my_putstr("Le résultat de l'addition est : ");
         my_putnbr(resultat);
     }
     
     if (operateur == '-') {
-        resultat = operant1 - operant2;
+        resultat = o1 - o2;
         // printf("Le résultat de la soustraction est: %.2f\n", resultat);
         my_putstr("Le résultat de la soustraction est : ");
         my_putnbr(resultat);
     }
     
     if (operateur == '*') {
-        resultat = operant1 * operant2;
+        resultat = o1 * o2;
         // printf("Le résultat de la multiplication est: %.2f\n", resultat);
         my_putstr("Le résultat de la multiplication est : ");
         my_putnbr(resultat);
     }
     
     if (operateur == '/') {
-        resultat = operant1 / operant2;
+        resultat = o1 / o2;
         // printf("Le résultat de la division est: %.2f\n", resultat);
         my_putstr("Le résultat de la division est : ");
         my_putnbr(resultat);
