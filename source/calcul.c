@@ -55,7 +55,7 @@ float calcul (int argc, const char * argv[], int k, float resultat){
                 {
                 if(o2 == 0){
                         printf("Erreur : vous essayez de diviser par 0.\n");
-                        return 1;
+                        return errno;
                 }else{
                         resultat = resultat / o1;
                     }
@@ -134,7 +134,7 @@ float calcul (int argc, const char * argv[], int k, float resultat){
         {
         if(o2 == 0){
                 printf("Erreur : vous essayez de diviser par 0.\n");
-                return 1;
+                return errno;
         }else{
                 resultat = resultat / o2;
             }
